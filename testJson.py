@@ -1,18 +1,11 @@
+import politoschedule
 import requests
-# uses HTTP request library from http://www.python-requests.org/en/latest/
 
 if __name__ == "__main__":
 
-    urlMaterie = "http://www.swas.polito.it/dotnet/orari_lezione_pub/mobile/ws_orari_mobile.asmx/get_elenco_materie"
-    parametriMaterie = { 'txt': 'Corno' }
+    courses = politoschedule.find_courses_by_text('Corno')
 
-    r = requests.post(urlMaterie,json=parametriMaterie)
-
-    corsi = r.json()
-
-    r.close()
-
-    for corso in corsi['d']:
+    for corso in courses:
         print "%s (%s) - prof. %s - codice %s" % (corso['materia'], corso['alfabetica'], corso['docente'], corso['chiave'])
 
         print "Orario:"
