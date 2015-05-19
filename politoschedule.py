@@ -56,9 +56,6 @@ class Event:
         """
         Create a new Event object.
 
-        Beware: the JSON information is parsed into meaningful fields. The parsing code is extremely
-        fragile, and may break if slight modification are made to the JSON content.
-
         :rtype: Event
         :param json_dict: the dictionary describing a scheduled event, returned by Json parsing
         """
@@ -81,26 +78,21 @@ class Event:
         self.end = datetime.datetime.strptime(self.end_str, "%Y-%m-%dT%H:%M:%S")
         '''end time, as a datetime object'''
 
-        # Parse and split the text into more useful fields
-        # Tecniche di programmazione<p style="margin:0"></p><p style="margin:0">SQUADRA 1</p><p style="margin:0">CORNO</p><p style="margin:0">Aula LEP A (DIGEP)</p>
-        words = re.split("<[^>]+>", self.text)
-        self.topic = words[0]
+        self.topic = json_dict['titolo_materia']
         '''Course name'''
 
-        self.dontknow = words[1]
-        '''???? (always empty???)'''
-
-        self.notes = words[3]
+        self.notes = json_dict['desc_evento']
         '''Notes (e.g, SQUADRA)'''
 
-        self.teacher = words[5]
-        '''Teacher (last name only)'''
+        self.teacher = json_dict['nominativo_docente']
+        '''Teacher'''
 
-        self.room = words[7]
-        '''Full room description (e.g., 'Aula 3')'''
-
-        self.roomname = self.room[self.room.find(' ') + 1:]
+        self.room = json_dict['aula']
         '''Room name (e.g., '3')'''
+
+        self.type = json_dict['tipo_evento']
+        '''Event type (e.g., class, exam, seminar, ...)'''
+
 
 
 class Room:
@@ -116,12 +108,20 @@ class Room:
         :param json_dict: the dictionary describing a classroom, returned by Json parsing
         """
         self.name = json_dict['aula']
+        '''Room name (e.g., '3I')'''
         self.campus = json_dict['sede']
+        '''Room campus location'''
         self.building = json_dict['sito']
+        '''Room building location (inside campus)'''
         self.seats = int(json_dict['posti'])
+        '''Number of seats'''
         self.type = json_dict['tipo']
+        '''Classroom type (A=Aula, L=Lab)'''
         self.lat = float(json_dict['lat'].replace(',', '.'))
+        '''GPS coordinates: latitude'''
         self.lon = float(json_dict['lon'].replace(',', '.'))
+        '''GPS coordinates: longitude'''
+
 
 
 def find_courses_by_text(text):

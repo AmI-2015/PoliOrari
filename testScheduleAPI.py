@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     print "Related events:"
     for event in events:
-        print "\t%s -> %s: %s (%s) [Room %s]" % (event.start, event.end, event.topic, event.teacher, event.roomname)
+        print "\t%s -> %s: %s (%s) [Room %s]" % (event.start, event.end, event.topic, event.teacher, event.room)
 
     rooms = politoschedule.get_all_classrooms()
     print "There are %d classrooms" % len(rooms)
@@ -40,4 +40,4 @@ if __name__ == "__main__":
     room_events = politoschedule.find_events_by_room(test_room, datetime.date.today())
 
     for event in room_events:
-        print "\t%s -> %s: %s (%s) [Room %s]" % (event.start, event.end, event.topic, event.teacher, event.roomname)
+        print "\t%s -> %s: %s (%s) [Room %s]" % (event.start, event.end, event.topic, event.teacher, event.room)
