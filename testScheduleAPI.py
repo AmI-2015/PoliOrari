@@ -1,7 +1,5 @@
 import datetime
 
-import requests
-
 import politoschedule
 
 if __name__ == "__main__":
@@ -43,4 +41,3 @@ if __name__ == "__main__":
 
     for event in room_events:
         print "\t%s -> %s: %s (%s) [Room %s]" % (event.start, event.end, event.topic, event.teacher, event.roomname)
-

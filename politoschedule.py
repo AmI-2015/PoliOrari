@@ -1,8 +1,8 @@
-'''
+"""
 'politoschedule' module for querying Politecnico di Torino's time tables
 
 :module: politoschedule
-'''
+"""
 
 import requests
 # uses HTTP request library from http://www.python-requests.org/en/latest/
@@ -103,7 +103,7 @@ class Event:
         '''Room name (e.g., '3')'''
 
 
-class Room():
+class Room:
     """
     Information about a single classroom
     """
