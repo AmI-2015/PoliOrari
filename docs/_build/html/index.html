@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to PoliOrari’s documentation! &mdash; PoliOrari 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PoliOrari 1.0 documentation" href="#" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">PoliOrari 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-poliorari-s-documentation">
+<h1>Welcome to PoliOrari&#8217;s documentation!<a class="headerlink" href="#welcome-to-poliorari-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<span class="target" id="module-politoschedule"></span><p>&#8216;politoschedule&#8217; module for querying Politecnico di Torino&#8217;s time tables</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">politoschedule</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="politoschedule.Course">
+<em class="property">class </em><code class="descclassname">politoschedule.</code><code class="descname">Course</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.Course" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information about a single course</p>
+<dl class="method">
+<dt id="politoschedule.Course.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.Course.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new Course object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#politoschedule.Course" title="politoschedule.Course">Course</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>json_dict</strong> &#8211; the dictionary describing a course, returned by Json parsing</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Course.alpha_range">
+<code class="descname">alpha_range</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Course.alpha_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alphabetical sub-group</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Course.key">
+<code class="descname">key</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Course.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique key</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Course.pd">
+<code class="descname">pd</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Course.pd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Periodo Didattico (Semester)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Course.teacher">
+<code class="descname">teacher</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Course.teacher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Teacher name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Course.topic">
+<code class="descname">topic</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Course.topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Topic (course name)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="politoschedule.Event">
+<em class="property">class </em><code class="descclassname">politoschedule.</code><code class="descname">Event</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information about a single scheduled event (class or exam)</p>
+<dl class="method">
+<dt id="politoschedule.Event.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.Event.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new Event object.</p>
+<p>Beware: the JSON information is parsed into meaningful fields. The parsing code is extremely
+fragile, and may break if slight modification are made to the JSON content.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#politoschedule.Event" title="politoschedule.Event">Event</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>json_dict</strong> &#8211; the dictionary describing a scheduled event, returned by Json parsing</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.dontknow">
+<code class="descname">dontknow</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.dontknow" title="Permalink to this definition">¶</a></dt>
+<dd><p>???? (always empty???)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.end">
+<code class="descname">end</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.end" title="Permalink to this definition">¶</a></dt>
+<dd><p>end time, as a datetime object</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.end_str">
+<code class="descname">end_str</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.end_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>end time, as a string</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique key</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.notes">
+<code class="descname">notes</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.notes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notes (e.g, SQUADRA)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.room">
+<code class="descname">room</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.room" title="Permalink to this definition">¶</a></dt>
+<dd><p>Full room description (e.g., &#8216;Aula 3&#8217;)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.roomname">
+<code class="descname">roomname</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.roomname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Room name (e.g., &#8216;3&#8217;)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.start">
+<code class="descname">start</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>start time, as a datetime object</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.start_str">
+<code class="descname">start_str</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.start_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>start time, as a string</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.teacher">
+<code class="descname">teacher</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.teacher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Teacher (last name only)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.text">
+<code class="descname">text</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>full description of the event (includes HTML)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.topic">
+<code class="descname">topic</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Course name</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="politoschedule.Room">
+<em class="property">class </em><code class="descclassname">politoschedule.</code><code class="descname">Room</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.Room" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information about a single classroom</p>
+<dl class="method">
+<dt id="politoschedule.Room.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.Room.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new Room object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#politoschedule.Room" title="politoschedule.Room">Room</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>json_dict</strong> &#8211; the dictionary describing a classroom, returned by Json parsing</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="politoschedule.find_courses_by_text">
+<code class="descclassname">politoschedule.</code><code class="descname">find_courses_by_text</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.find_courses_by_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches the full list of available courses and returns the ones
+whose description, or whose teacher name, matches the parameter &#8216;text&#8217;.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>str</em>) &#8211; string to search (in course name, and teacher name)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the list of matching courses</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list[Course]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="politoschedule.find_events_by_courses">
+<code class="descclassname">politoschedule.</code><code class="descname">find_events_by_courses</code><span class="sig-paren">(</span><em>courses</em>, <em>date</em><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.find_events_by_courses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches the full list of events for a list of specified courses. The events are bound to
+one week before and two weeks later than the specified date.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>courses</strong> (<em>list[str]</em>) &#8211; a list of course IDs (taken from the field &#8220;chiave&#8221; in the find_courses_by_text result)</li>
+<li><strong>date</strong> (<em>datetime.date</em>) &#8211; the date around which the events are extracted (suggestion: datetime.date.today())</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a list of events describing all the classes (in future, also exams) for anyof the courses</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list[event]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="politoschedule.find_events_by_room">
+<code class="descclassname">politoschedule.</code><code class="descname">find_events_by_room</code><span class="sig-paren">(</span><em>room</em>, <em>date</em><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.find_events_by_room" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches the full list of events for a list of specified courses. The events are bound to
+one week before and two weeks later than the specified date.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>room</strong> (<em>str</em>) &#8211; the name of the classroom (taken from Room.name)</li>
+<li><strong>date</strong> (<em>datetime.date</em>) &#8211; the date around which the events are extracted (suggestion: datetime.date.today())</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a list of events describing all the classes (in future, also exams) for the room</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list[Event]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="politoschedule.get_all_classrooms">
+<code class="descclassname">politoschedule.</code><code class="descname">get_all_classrooms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.get_all_classrooms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches the full list of classrooms.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a complete(?) list of classrooms all the classes in Politecnico</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[Room]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to PoliOrari&#8217;s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Fulvio Corno.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.4</a>
+      
+      |
+      <a href="_sources/index.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>
