@@ -124,8 +124,6 @@
 <dt id="politoschedule.Event.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#politoschedule.Event.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new Event object.</p>
-<p>Beware: the JSON information is parsed into meaningful fields. The parsing code is extremely
-fragile, and may break if slight modification are made to the JSON content.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -136,12 +134,6 @@ fragile, and may break if slight modification are made to the JSON content.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="politoschedule.Event.dontknow">
-<code class="descname">dontknow</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.dontknow" title="Permalink to this definition">¶</a></dt>
-<dd><p>???? (always empty???)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -171,12 +163,6 @@ fragile, and may break if slight modification are made to the JSON content.</p>
 <dl class="attribute">
 <dt id="politoschedule.Event.room">
 <code class="descname">room</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.room" title="Permalink to this definition">¶</a></dt>
-<dd><p>Full room description (e.g., &#8216;Aula 3&#8217;)</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="politoschedule.Event.roomname">
-<code class="descname">roomname</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.roomname" title="Permalink to this definition">¶</a></dt>
 <dd><p>Room name (e.g., &#8216;3&#8217;)</p>
 </dd></dl>
 
@@ -195,7 +181,7 @@ fragile, and may break if slight modification are made to the JSON content.</p>
 <dl class="attribute">
 <dt id="politoschedule.Event.teacher">
 <code class="descname">teacher</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.teacher" title="Permalink to this definition">¶</a></dt>
-<dd><p>Teacher (last name only)</p>
+<dd><p>Teacher</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -208,6 +194,12 @@ fragile, and may break if slight modification are made to the JSON content.</p>
 <dt id="politoschedule.Event.topic">
 <code class="descname">topic</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Course name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Event.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Event.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event type (e.g., class, exam, seminar, ...)</p>
 </dd></dl>
 
 </dd></dl>
@@ -230,6 +222,48 @@ fragile, and may break if slight modification are made to the JSON content.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Room.building">
+<code class="descname">building</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Room.building" title="Permalink to this definition">¶</a></dt>
+<dd><p>Room building location (inside campus)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Room.campus">
+<code class="descname">campus</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Room.campus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Room campus location</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Room.lat">
+<code class="descname">lat</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Room.lat" title="Permalink to this definition">¶</a></dt>
+<dd><p>GPS coordinates: latitude</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Room.lon">
+<code class="descname">lon</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Room.lon" title="Permalink to this definition">¶</a></dt>
+<dd><p>GPS coordinates: longitude</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Room.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Room.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Room name (e.g., &#8216;3I&#8217;)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Room.seats">
+<code class="descname">seats</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Room.seats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of seats</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="politoschedule.Room.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#politoschedule.Room.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Classroom type (A=Aula, L=Lab)</p>
 </dd></dl>
 
 </dd></dl>
